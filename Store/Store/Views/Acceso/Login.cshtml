@@ -1,0 +1,200 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="CSS/bootstrap.css" rel="stylesheet" />
+    <link href="CSS/normalize.css" rel="stylesheet" />
+    <link href="CSS/Control.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script type="text/javascript" src="JS/prefixfree.min.js"></script>
+    <style>
+        form {
+    text-align: center;
+}
+body {
+    font-size: 16px;
+	color: #fff;
+	
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+    top:20px;
+}
+.content{
+    text-align:center;
+    
+}
+.banner{
+ text-align:center;
+ background:#fb4b4b;
+}
+.Foot{
+   text-align:center;
+   background:#14afb4;
+}
+a.bt-home {
+	border: 1px solid #fff;
+	border-radius: 10px;
+	width: 106px;
+	padding: 1em;
+	margin: 30px 0.6em 16px 1em;
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	transition: all linear .3s;
+    height: 47px;
+}
+a.bt-home:hover {
+	background: #3c98f1;
+	transition: all linear .3s;
+	transform: scale(1.1);
+}
+
+.login {
+	background: #fff;
+	width: 97%;
+	padding: 1em;
+	text-align: center;
+	position: absolute;
+	top: -100px;
+	border-bottom: 3px solid #f60;
+}
+input {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: .5em;
+	outline: 0;
+}
+input[type="button"]{
+	background: blue;
+	cursor: pointer;
+	color: #fff;
+}
+input[type="search"]{
+    width:340px;
+}
+input[type="button"]:hover{
+	background: #ccc;
+	color: #000;
+}
+.cerrar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: inline-block;
+	float: right;
+	color: #fff;
+	background: #ff0000;
+}
+.oscurecer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+	background: rgba(0,0,0,.8);
+}
+.registrar {
+	width: 40%;
+	background: #fff;
+	border-radius: 1em;
+	padding: 3em;
+	position: fixed;
+	top:100px;
+	left: 30%;
+	z-index: 200;
+	display: none;
+}
+.registrar h1 {
+	color: #333;
+	text-shadow:none;
+}
+.registrar input {
+	width: 100%;
+	padding: 1em;
+	margin-bottom: 10px;
+}
+.cerrarRegistro{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    width:30px ;
+    height:30px;
+    border-radius:50%;
+    background:#ff0000;
+    color:#fbfbfb;
+    cursor:pointer;
+    text-align:center ;
+}
+i.separar {
+	padding-right: 15px;
+   
+}
+    </style>
+</head>
+<body>
+    <div>
+        <form action="@Url.Content("~/Acceso/Login")" method="post">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="Fuente.aspx">Producto</a>
+                                <a class="dropdown-item" href="#">Reportes</a>
+                                <a class="dropdown-item" href="#">Catalogo</a>
+                                <a class="dropdown-item" href="Perfil.aspx">Mi perfil</a>
+                            </div>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <input type="search" placeholder="Buscar" />
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <a href="#" class="bt-home" id="activarLogin"><i aria-hidden="true">Ingresar </i></a>
+                            <i>@Html.ActionLink("Registrate!","Register","Acceso",new {style= "border: 1px solid #fff; border-radius: 10px; width: 106px; padding: 1em; margin: 30px 0.6em 16px 1em; display: inline-block;; color: #fff;	text-decoration: none;; transition: all linear .3s; height: 47px; :hover{background: #3c98f1; transition: all linear .3s; transform: scale(1.1);}" })</i>
+                            <a href="#" class="bt-home" id="carrito">
+                                <i aria-hidden="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart4" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                    </svg>
+                                </i>
+                            </a>
+                            &nbsp;
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="login" id="login">
+                <a href="" class="cerrar" id="cerrar"><i class="fa fa-times" aria-hidden="true">X</i></a>
+                <form>
+                    <input type="text" required placeholder="Usuario" name="User">
+                    <input type="password" requered placeholder="********" name="Pass">
+                    <input type="submit" value="Entrar" class="btn-home" name="end" />
+                </form>
+            </div>
+             </form>
+    </div>
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="JS/acciones.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

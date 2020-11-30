@@ -1,0 +1,90 @@
+﻿@model Store.Models.Productos
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Productos</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NombreProducto)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Precio_venta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Precio_venta)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Presentacion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Presentacion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cantidad)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Estado)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Categorias.NombreCate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Categorias.NombreCate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Proveedor.NombreProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Proveedor.NombreProveedor)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Idproducto }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

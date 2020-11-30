@@ -1,0 +1,126 @@
+﻿form {
+    text-align: center;
+}
+body {
+    font-size: 16px;
+	color: #fff;
+	
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+    top:20px;
+}
+
+.content{
+    text-align:center;
+    
+}
+.banner{
+ text-align:center;
+ background:#fb4b4b;
+}
+.Foot{
+   text-align:center;
+   background:#14afb4;
+}
+a.bt-home {
+	border: 1px solid #fff;
+	border-radius: 10px;
+	width: 106px;
+	padding: 1em;
+	margin: 30px 0.6em 16px 1em;
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	transition: all linear .3s;
+    height: 47px;
+}
+a.bt-home:hover {
+	background: #3c98f1;
+	transition: all linear .3s;
+	transform: scale(1.1);
+}
+
+.login {
+	background: #fff;
+	width: 97%;
+	padding: 1em;
+	text-align: center;
+	position: absolute;
+	top: -100px;
+	border-bottom: 3px solid #f60;
+}
+input {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: .5em;
+	outline: 0;
+}
+input[type="button"]{
+	background: blue;
+	cursor: pointer;
+	color: #fff;
+}
+
+input[type="search"]{
+    width:340px;
+}
+input[type="button"]:hover{
+	background: #ccc;
+	color: #000;
+}
+.cerrar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: inline-block;
+	float: right;
+	color: #fff;
+	background: #ff0000;
+}
+.oscurecer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+	background: rgba(0,0,0,.8);
+}
+.registrar {
+	width: 40%;
+	background: #fff;
+	border-radius: 1em;
+	padding: 3em;
+	position: fixed;
+	top:100px;
+	left: 30%;
+	z-index: 200;
+	display: none;
+}
+.registrar h1 {
+	color: #333;
+	text-shadow:none;
+}
+.registrar input {
+	width: 100%;
+	padding: 1em;
+	margin-bottom: 10px;
+}
+.cerrarRegistro{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    width:30px ;
+    height:30px;
+    border-radius:50%;
+    background:#ff0000;
+    color:#fbfbfb;
+    cursor:pointer;
+    text-align:center ;
+}
+
+i.separar {
+	padding-right: 15px;
+   
+}
